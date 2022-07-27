@@ -1,0 +1,145 @@
+.section__project{
+	flex-wrap: wrap;
+	padding: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.project__title{
+	font-size: 50px;
+	color: yellow;
+	@media (max-width:450px) {
+		font-size: 38px;
+	}
+}
+.project{
+	padding-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	flex-wrap: wrap;
+}
+
+
+
+.card {
+	width: 400px;
+	height: 320px;
+	background: #5858585c;
+	// padding: 35px 15px;
+	transition: box-shadow .3s ease, transform .2s ease;
+	@media (max-width: 500px) {
+		width: 300px;
+	}
+	@media (max-width:450px) {
+		width: 250px;
+	}
+   }
+   
+   .card-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: transform .2s ease, opacity .2s ease;
+   }
+   
+   /*Image*/
+   .card-avatar {
+	background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
+	width: 400px;
+	height: 200px;
+	// border-radius: 50%;
+	transition: transform .2s ease;
+	margin-bottom: 20px;
+	@media (max-width: 500px) {
+		width: 300px;
+	}
+	@media (max-width: 450px) {
+		width: 250px;
+	}
+   }
+   
+   
+   /*Card footer*/
+   .card-social {
+	transform: translateY(-100%);
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+	width: 100%;
+	opacity: 0;
+	transition: transform .2s ease, opacity .2s ease;
+   }
+   
+   .card-social__item {
+	list-style: none;
+   }
+
+   .card-social__item button{
+		background: #5858585c;
+		border-radius: 10px;
+		padding: 8px;
+		border: 3px solid #222;
+		color: rgb(42, 42, 42);
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 2rem;
+		transition: 0.3s ease;
+		
+		&:hover{
+			background: #232323;
+			border: 3px solid #232323;
+			color: yellow;
+			transform: scale(1.1);
+		}
+   }
+   
+   .card-social__item svg {
+	display: block;
+	height: 48px;
+	width: 48px;
+	fill: #5858585c;
+	cursor: pointer;
+	transition: fill 0.2s ease ,transform 0.2s ease;
+   }
+   
+   /*Text*/
+   .card-title {
+	color: #333;
+	font-size: 1.5em;
+	font-weight: 600;
+	line-height: 2rem;
+   }
+   
+   .card-subtitle {
+	color: #859ba8;
+	font-size: 0.8em;
+	padding-bottom: 10px;
+   }
+   
+   /*Hover*/
+   .card:hover {
+	box-shadow: 0 8px 50px #f3f3f34a;
+   }
+   
+   .card:hover .card-info {
+	transform: translateY(-5%);
+   }
+   
+   .card:hover .card-social {
+	transform: translateY(-30%);
+	opacity: 1;
+   }
+   
+   .card-social__item svg:hover {
+	fill: #232323;
+	stroke:#232323;
+	transform: scale(1.1);
+   }
+   
+   .card-avatar:hover {
+	transform: scale(1.1);
+   }
